@@ -1,0 +1,325 @@
+/* default section  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --animate-duration: 800ms;
+    --animation-delay: 0.9s;
+    --brand-color: green;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+ul li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #232323;
+    font-weight: 700;
+}
+
+/* Navbar  */
+
+.sticky {
+    transition: all 0.20s linear 0s;
+    -o-transition: all 0.20s linear 0s;
+    -ms-transition: all 0.20s linear 0s;
+    -moz-transition: all 0.20s linear 0s;
+    -webkit-transition: all 0.20s linear 0s;
+    animation-duration: 1s;
+}
+
+.fixed {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    background: #fff;
+    /* box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.2), 4px 0px 5px 1px rgba(0, 0, 0, 0.19); */
+    border-bottom: 3px solid green;
+
+}
+
+.nav-link {
+    position: relative;
+    padding: 0px;
+    margin: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+.nav-link:hover{
+    color:green;
+}
+.nav-link::before {
+    content: "";
+    width: calc(0%);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 1.5px;
+    background-color: green;
+    transition: all 0.4s linear;
+}
+
+
+.nav-link:hover::before {
+    width: calc(100%);
+}
+
+
+
+
+/* About Me  */
+#about-section {
+    padding: 100px 0px;
+}
+
+.about-section-text {
+    margin-bottom: 40px;
+    text-align: center;
+}
+ .about-section-text p {
+    text-align: center;
+    font-style: italic;
+    font-size: 19px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: #444;
+}
+
+.title-style {
+    color: black;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 34px;
+}
+
+.title-style::before {
+    content: '';
+    width: 250px;
+    height: 1px;
+    background: #00000036;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+}
+
+.title-style::after {
+    content: '';
+    width: 60px;
+    height: 2px;
+    background: #00000099;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 30px);
+}
+
+.about p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.about-btn {
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid;
+}
+
+.about-inner {
+    padding: 100px 0px;
+    background-color: #f6f7fd;
+}
+
+.inner-about-text {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* Service Section  */
+#service-section {
+    background-color: #f1f1f1;
+}
+
+.service-section-text h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 42px;
+    padding-top: 50px;
+}
+
+.service-section-text p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.icon {
+    background: green;
+    width: 100px;
+    height: 100px;
+    color: white;
+    text-align: center;
+    margin: auto;
+    border: 1px solid #c5c0c0;
+    z-index: 1;
+    position: relative;
+}
+
+.section-div-style {
+    background: white;
+    padding: 40px;
+    text-align: center;
+    margin-top: -33px;
+}
+
+.icon i {
+    margin-top: 20px;
+    font-size: 55px;
+}
+
+.section-div-style p {
+    font-style: italic;
+}
+
+.icon:hover {
+    border: 2px solid silver;
+}
+
+/* Portfolio Section  */
+.project-services {
+    overflow: hidden;
+    padding-bottom: 100px;
+}
+
+.project-services h2 {
+    margin-top: 105px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 34px;
+}
+
+.project-services p {
+    text-align: center;
+    font-style: italic;
+    font-size: 19px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: #444;
+}
+
+
+.course .course-img {
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.course .course-img>img {
+    width: 100%;
+}
+
+
+.course .course-title {
+    display: block;
+    height: 42px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-style: italic;
+    padding-top: 7px;
+}
+
+.course .course-img img {
+    max-width: 100%;
+    -webkit-transition: all 2000ms ease;
+    -moz-transition: all 2000ms ease;
+    -ms-transition: all 2000ms ease;
+    -o-transition: all 2000ms ease;
+    transition: all 2000ms ease;
+}
+
+.course .course-img img:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+/* Client Site  */
+.review-section{
+    background:#212c47;
+    padding: 100px 0px;
+    text-align: center;
+    color: white;
+
+}
+.item-text p {
+    color: #fff;
+    font-size: 25px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    line-height: 1.4;
+}
+.name-holder{
+    margin-top: 30px;
+    color: #fff;
+    font-size: 15px;
+    font-family: "Montserrat";
+}
+.owl-theme .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    background: #D6D6D6;
+    display: none;
+    transition: opacity .2s ease;
+    border-radius: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
