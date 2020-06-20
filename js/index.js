@@ -1,12 +1,21 @@
 // Not a ton of code, but hard to
 const nav = document.querySelector('.navbar');
+const navLinkList = document.querySelectorAll('.nav-link');
+const title = document.querySelector('.title');
+const navLinkArray = [...navLinkList];
 function fixNav() {
     if (window.scrollY >= 100) {
-        // document.body.style.paddingTop = nav.offsetHeight + 'px';
         nav.classList.add('animate__fadeInDown','fixed');
-        
+        navLinkArray.map(link => {
+            link.classList.add('nav-link-change')
+        })
+        title.style.color = "black"
     } else {
         nav.classList.remove('animate__fadeInDown','fixed');
+        navLinkArray.map(link => {
+            link.classList.remove('nav-link-change')
+        })
+        title.style.color = "white";
     }
 }
 
@@ -62,4 +71,19 @@ $(document).ready(function () {
             }
         }
     });
+});
+/* Typed Js */
+var typed = new Typed('.element', {
+    strings: [
+        "I'm Front-End Web Developer", "5+ Mini Javascript Project Here",
+        "1. LoveChecker Calculator", "", "2. Drum Kit With Keyboard Keys",
+        "3. Live Analog Clock", "4. Propose Your Crush", "5.Shopping Cart"
+    ],
+    loop:true,
+    typeSpeed: 25,
+    startDelay: 100,
+    backSpeed: 25,
+    smartBackspace: true,
+    backDelay: 900,
+
 });
