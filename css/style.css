@@ -9,12 +9,11 @@
     --animate-duration: 800ms;
     --animation-delay: 0.9s;
     --brand-color: green;
+    --color: green;
 }
-
 html {
     scroll-behavior: smooth;
 }
-
 body {
     font-family: "Segoe UI", Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -53,11 +52,17 @@ h6 {
     left: 0;
     right: 0;
     top: 0;
-    z-index: 3;
+    z-index: 300;
     background: #fff;
-    /* box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.2), 4px 0px 5px 1px rgba(0, 0, 0, 0.19); */
     border-bottom: 3px solid green;
+    color: black !important;
 
+}
+nav{
+    background-color: #212c47;
+}
+.navbar-brand h4{
+    color: white;
 }
 
 .nav-link {
@@ -68,7 +73,10 @@ h6 {
     font-weight: 600;
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
-    color: black;
+    color: white;
+}
+.nav-link-change{
+    color: black !important;
 }
 .nav-link:hover{
     color:green;
@@ -91,7 +99,67 @@ h6 {
 
 
 
+/* Home Section */
+#home-section{
+    height: 100vh;
+    width: 100%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    z-index: -1;
+    background-color: #212c47;
+}
+.home-about{
+    color:white;
+}
+.home-about h2{
+    color: white;
+    font-size: 45px;
+    font-weight: 600;
+}
+.home-about h4{
+    color:white;
+    font-size: 25px;
+    font-weight: 500;
+}
+.element{
+    color:white;
+    font-size: 25px;
+    font-weight: 500;
+}
+.link {
+    padding: 10px 0px;
+}
 
+.link a i {
+    color:white;
+    padding: 8px;
+    border: 1.5px solid white;
+    border-radius: 50%;
+}
+
+.link a i:hover {
+    color: white;
+    border: 1.5px solid var(--color);
+}
+
+a.facebook {
+    padding: 10px 16px;
+}
+
+i.facebook.fab.fa-facebook-f {
+    padding: 8px 11px;
+}
+
+i.linkedin.fab.fa-linkedin-in {
+    padding: 8px 9px;
+}
+.card{
+    color: white;
+    transition: all 0.5s;
+    
+}
+.card-text{
+    font-size: 14px;
+}
 /* About Me  */
 #about-section {
     padding: 100px 0px;
@@ -190,7 +258,7 @@ h6 {
     color: white;
     text-align: center;
     margin: auto;
-    border: 1px solid #c5c0c0;
+    /* border: 1px solid #c5c0c0; */
     z-index: 1;
     position: relative;
 }
@@ -201,7 +269,21 @@ h6 {
     text-align: center;
     margin-top: -33px;
 }
+.icon-box {
+    height: 105px;
+    width: 105px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 50;
 
+
+}
+.icon-box:hover{
+    border: 1.5px solid black;
+}
+.icon{
+    transition: 0.4s ;
+}
 .icon i {
     margin-top: 20px;
     font-size: 55px;
@@ -212,7 +294,8 @@ h6 {
 }
 
 .icon:hover {
-    border: 2px solid silver;
+    /* border: 2px solid silver; */
+    transform: scale(0.85);
 }
 
 /* Portfolio Section  */
@@ -281,10 +364,9 @@ h6 {
 /* Client Site  */
 .review-section{
     background:#212c47;
-    padding: 100px 0px;
+    padding: 80px 0px;
     text-align: center;
     color: white;
-
 }
 .item-text p {
     color: #fff;
@@ -312,14 +394,59 @@ h6 {
 
 
 
+#contact-section{
+    background: url(../img/bg-registration-form-7.jpg) no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 80px 0px;
+    width: 100%;
 
+}
+.contact-wrap{
+    max-width: 758px;
+    background: #212c47;
+    margin: 0 auto;
+    border: 10px solid #0d99d7;
+    padding: 65px 99px 87px;
+    margin-top: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+.contact-wrap label{
+    font-size: 14px;
+}
+input,textarea {
+    display: block;
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid#0d99d7;
+    margin-bottom: 24px;
+    color: white;
+    
+}
+.contact-title{
+    padding-bottom: 30px;
+    text-align: center;
+}
+.contact-title h1{
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
 
-
-
-
-
-
-
-
-
-
+}
+input[type=submit]{
+  width: 50%;
+  
+}
+footer{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #212c47;
+    color: white;
+    
+}
+footer p{
+    margin-top: 14px;
+}
